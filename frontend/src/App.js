@@ -2,11 +2,13 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { store } from './redux/store/store';
 
+import { AppRouter } from './routes/AppRouter';
+
 function App()
 {
 	return (
 		<Provider store={ store }>
-			<h1>Hola mundo</h1>
+			<AppRouter />
 		</Provider>
 	);
 }
