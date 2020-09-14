@@ -1,10 +1,13 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 export const Register = () =>
 {
 	return (
-		<div>
-			<h1>Chao</h1>
+		<div className="auth__form">
+			<Button>
+				Registrar
+			</Button>
 		</div>
 	)
 }
