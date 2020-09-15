@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 
 import { Login } from '../components/auth/Login';
@@ -7,7 +7,7 @@ import { Register } from '../components/auth/Register';
 export const AuthRouter = () =>
 {
 	return (
-		<div className="auth__main">
+		<Fragment>
 			<div className="auth__container">
 				<Switch>
 					<Route exact path="/auth/login" component={ Login } />
@@ -16,6 +16,6 @@ export const AuthRouter = () =>
 					<Redirect to="/auth/login" />
 				</Switch>
 			</div>
-		</div>
+		</Fragment>
 	)
 }
