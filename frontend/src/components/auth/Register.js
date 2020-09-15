@@ -8,8 +8,39 @@ export const Register = () =>
 	return (
 		<Fragment>
 			<div className="auth__form-container">
-				<h2 className="auth__title">Log in to your account</h2>
+				<h2 className="auth__title">Sign in to your account</h2>
 				<Form className="auth__form">
+
+					<Form.Label>First Name</Form.Label>
+					<InputGroup className="mb-4">
+
+						<InputGroup.Prepend>
+							<InputGroup.Text>FN</InputGroup.Text>
+						</InputGroup.Prepend>
+
+						<Form.Control
+							required
+							type="text"
+							placeholder="Enter your first name"
+						/>
+
+					</InputGroup>
+
+					<Form.Label>First Name</Form.Label>
+					<InputGroup className="mb-4">
+
+						<InputGroup.Prepend>
+							<InputGroup.Text>LN</InputGroup.Text>
+						</InputGroup.Prepend>
+
+						<Form.Control
+							required
+							type="text"
+							placeholder="Enter your last name"
+						/>
+
+					</InputGroup>
+
 					<Form.Label>Email address</Form.Label>
 					<InputGroup className="mb-4">
 
@@ -18,7 +49,8 @@ export const Register = () =>
 						</InputGroup.Prepend>
 
 						<Form.Control
-							type="text"
+							required
+							type="email"
 							placeholder="Email address"
 						/>
 
@@ -32,13 +64,14 @@ export const Register = () =>
 						</InputGroup.Prepend>
 
 						<Form.Control
+							required
 							type="password"
 							placeholder="Password"
 						/>
 
 					</InputGroup>
 
-					<Button className="btn-action">
+					<Button className="btn-action" type="submit">
 						Sign In
 					</Button>
 				</Form>
